@@ -14,6 +14,8 @@ def missing_elements(my_list: list) -> list:
             result.append(my_list[i] - 1)
     return result
 
+print(missing_elements([1, 2, 4, 6, 7]))
+
 """
 Exercise-2: Count occurrences
 Write a function "count_occurrences(my_list: list) -> dict" that takes a
@@ -31,6 +33,8 @@ def count_occurrences(my_list: list) -> dict:
         dict[i] = count
     return dict
 
+print(count_occurrences([1, 2, 3, 1, 2, 4, 5, 4]))
+
 """
 Exercise-4: Common elements
 Write a function "common_elements(list1: list, list2: list) -> list" that takes two
@@ -42,6 +46,8 @@ common_elements([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]) -> [3, 4, 5]
 
 def common_elements(list1: list, list2: list) -> list:
     return list(set(list1) & set(list2))
+
+print(common_elements([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]))
 
 """
 Exercise-5: Character frequency
@@ -58,6 +64,8 @@ def char_frequency(my_string: str) -> dict:
         count = my_string.count(char)
         dict[char] = count
     return dict
+
+print(char_frequency('hello world'))
 
 """
 Exercise-6: Unique words
@@ -80,6 +88,8 @@ def unique_words(my_string: str) -> int:
         
     return count 
 
+print(unique_words('hello world hello'))
+
 """
 Exercise-7: Word frequency
 Write a function "word_frequency(my_string: str) -> dict" that takes a
@@ -97,6 +107,8 @@ def word_frequency(my_string: str) -> dict:
         dict[i] = count
     return dict
 
+print(word_frequency('hello world hello'))
+
 """
 Exercise-8: Count elements in range
 Write a function "count_in_range(my_list: list, start: int, end: int) -> int" that
@@ -111,6 +123,8 @@ def count_in_range(my_list: list, start: int, end: int) -> int:
     list = my_list[start : end + 1]
     my_set = set(list)
     return len(my_set)
+
+print(count_in_range([1, 2, 3, 4, 5, 4, 3, 2, 1], 2, 4))
 
 """
 Exercise-9: Swap dictionary keys and values
@@ -132,6 +146,8 @@ def swap_dict(d: dict) -> dict:
     
     return new_dict
 
+print(swap_dict({1: 'a', 2: 'b', 3: 'c'}))
+
 """
 Exercise-10: Subset check
 Write a function "is_subset(set1: set, set2: set) -> bool" that takes two
@@ -143,6 +159,8 @@ is_subset({1, 2, 3, 4, 5}, {3, 4, 5}) -> True
 
 def is_subset(set1: set, set2: set) -> bool:
     return set2.issubset(set1)
+
+print(is_subset({1, 2, 3, 4, 5}, {3, 4, 5}))
 
 """
 Exercise-11: Intersection of lists
@@ -158,6 +176,8 @@ def list_intersection(list1: list, list2: list) -> list:
     
     return intersection
 
+print(list_intersection([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]))
+
 """
 Exercise-12: Union of lists
 Write a function "list_union(list1: list, list2: list) -> list" that takes two
@@ -170,6 +190,8 @@ list_union([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]) -> [1, 2, 3, 4, 5, 6, 7]
 def list_union(list1: list, list2: list) -> list:
     union = list(set(list1) | set(list2))
     return union
+
+print(list_union([1, 2, 3, 4, 5], [3, 4, 5, 6, 7]))
 
 """
 Exercise-13: Most frequent element
@@ -193,6 +215,8 @@ def most_frequent(my_list: list) -> int:
     
     return num
 
+print(most_frequent([1, 2, 3, 1, 2, 4, 5, 4, 1]))
+
 """
 Exercise-14: Least frequent element
 Write a function "least_frequent(my_list: list) -> int" that takes a
@@ -213,3 +237,5 @@ def least_frequent(my_list: list) -> int:
             num = item
 
     return num
+
+print(least_frequent([1, 2, 3, 1, 2, 4, 5, 4, 1]))
