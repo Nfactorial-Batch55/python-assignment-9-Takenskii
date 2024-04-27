@@ -94,5 +94,6 @@ class TestFunctions(unittest.TestCase):
         self.assertEqual(hw.least_frequent([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]*10**5 + [11]), 11)
         self.assertEqual(hw.least_frequent([1]), 1)
 
+
 if __name__ == "__main__":
     unittest.main()
