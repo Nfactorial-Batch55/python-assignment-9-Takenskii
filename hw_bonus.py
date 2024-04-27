@@ -8,9 +8,6 @@ Example:
 two_sum([2, 7, 11, 15], 9) -> (0, 1)
 """
 
-def two_sum(nums: list, target: int) -> tuple:
-    pass
-
 """
 💎 Exercise-2: Isomorphic Strings
 Write a function "is_isomorphic(s: str, t: str) -> bool" that takes two strings s and t
@@ -21,8 +18,21 @@ Example:
 is_isomorphic('egg', 'add') -> True
 """
 
-def is_isomorphic(s: str, t: str) -> bool:
-    pass
+def is_isomorphic(str1: str, str2: str) -> bool:
+    charCount = dict()
+    c = "a"
+    for i in range(len(str1)):
+        if str1[i] in charCount:
+            c = charCount[str1[i]]
+            if c != str2[i]:
+                return False
+        elif str2[i] not in charCount.values():
+            charCount[str1[i]] = str2[i]
+        else:
+            return False
+    return True
+
+print(is_isomorphic('egg', 'add'))
 
 """
 💎 Exercise-3: Check Alien Dictionary
